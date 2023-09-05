@@ -1,0 +1,37 @@
+PROBLEMS
+	SOLUTION:
+
+include is not defined in myportfolio/urls.py
+	from django.urls import path, include
+templates cannot find
+	changed the myportfolio/settings.py
+
+	TEMPLATES = [
+	    {
+	        ...
+	        'DIRS': [os.path.join(BASE_DIR, 'portfolio/templates')],
+	        ...
+	    },
+	]
+
+	INSTALLED_APPS = [
+	    ...
+	    'portfolio',
+	    ...
+	]
+zsh: command not found: web:
+	basically you need to make a Procfile at the root that contains "zsh: command not found: web:"
+ModuleNotFoundError: No module named 'dj_database_url'
+	pip install dj-database-url
+	pip freeze > requirements.txt
+NameError: name 'os' is not defined
+	import os at myportfolio/settings.py
+django.core.exceptions.ImproperlyConfigured: You're using the staticfiles app without having set the STATIC_ROOT setting to a filesystem path.
+	Add to the myportfolio/settings.py:
+	STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+DisallowedHost at /
+Invalid HTTP_HOST header: 'dymasius-32517b06c6a4.herokuapp.com'. You may need to add 'dymasius-32517b06c6a4.herokuapp.com' to ALLOWED_HOSTS.
+	ALLOWED_HOSTS = ['dymasius-32517b06c6a4.herokuapp.com', 'localhost', '127.0.0.1']
+	OR
+	ALLOWED_HOSTS = ['*']
+
