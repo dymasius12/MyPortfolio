@@ -128,6 +128,8 @@ STATIC_URL = 'static/'
 
 #added this when deploying to heroku
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'portfolio/static')]
+
 
 
 # Default primary key field type
