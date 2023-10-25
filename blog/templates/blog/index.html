@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Dymasius's Blog
+{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/index.css" %}" />
+{% endblock css_files %}
+
+
+
+{% block content %}
+    <header id="main-navigation">
+        <h1><a href="">Dymasius Blog</a></h1>
+        <nav>
+            <a href=""> All Posts</a>
+        </nav>
+    </header>
+
+    <section id="welcome">
+        <header>
+            <img src="" alt="Dymasius - The author of this blog" />
+            <h2>DYMASIUS'S BLOG</h2>
+        </header>
+        <p> Hi, I am Dymasius and this is my blog about myself</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest Thoughts</h2>
+
+        <ul>
+            <li>
+                <article>
+                    <a href="">
+                        <img src="" alt="image of article" />
+                        <div class="post__content">
+                            <h3>Mountain Hiking</h3>
+                            <p> About mountain hiking by Dymasius</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I do</h2>
+        <p> I love programming and new technologies in general</p>
+        <p> My goal is to keep growing</p>
+    </section>
+{% endblock content %}

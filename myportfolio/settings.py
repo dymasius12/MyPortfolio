@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'portfolio', #need to add this to include portfolio template app
+    'blog', #need to add this to include blog template app
 ]
 
 MIDDLEWARE = [
@@ -58,7 +59,10 @@ ROOT_URLCONF = 'myportfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'portfolio/templates')],
+        'DIRS': [
+            BASE_DIR / "templates"
+            #os.path.join(BASE_DIR, 'portfolio/templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,7 +132,10 @@ STATIC_URL = 'static/'
 
 #added this when deploying to heroku
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'portfolio/static')]
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    #os.path.join(BASE_DIR, 'portfolio/static'),
+]
 
 
 
