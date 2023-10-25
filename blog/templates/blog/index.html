@@ -1,53 +1,60 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
 {% load static %}
 
-{% block title %}
-    Dymasius's Blog
-{% endblock title %}
+{% block title %} 
+Dymasius Blog 
+{% endblock %} 
 
 {% block css_files %}
-    <link rel="stylesheet" href="{% static "blog/index.css" %}" />
-{% endblock css_files %}
-
-
+  <link rel="stylesheet" href="{% static "blog/index.css" %}" />
+{% endblock %}
 
 {% block content %}
-    <header id="main-navigation">
-        <h1><a href="">Dymasius Blog</a></h1>
-        <nav>
-            <a href=""> All Posts</a>
-        </nav>
-    </header>
+<header id="main-navigation">
+  <h1><a href="">Dymasius' Blog</a></h1>
+  <nav>
+    <a href="">All Posts</a>
+  </nav>
+</header>
 
-    <section id="welcome">
-        <header>
-            <img src="" alt="Dymasius - The author of this blog" />
-            <h2>DYMASIUS'S BLOG</h2>
-        </header>
-        <p> Hi, I am Dymasius and this is my blog about myself</p>
-    </section>
+<section id="welcome">
+  <header>
+    <img src="{% static "blog/images/dymasius.png" %}" alt="Dymasius - The Author Of This Blog" />
+    <h2>DYMASIUS'S BLOG</h2>
+  </header>
+  <p>Hi, I am Dymasius and I love to blog about tech and the world!</p>
+</section>
 
-    <section id="latest-posts">
-        <h2>My Latest Thoughts</h2>
+<section id="latest-posts">
+  <h2>My Latest Thoughts</h2>
 
-        <ul>
-            <li>
-                <article>
-                    <a href="">
-                        <img src="" alt="image of article" />
-                        <div class="post__content">
-                            <h3>Mountain Hiking</h3>
-                            <p> About mountain hiking by Dymasius</p>
-                        </div>
-                    </a>
-                </article>
-            </li>
-        </ul>
-    </section>
+  <ul>
+    <li>
+      <article class="post">
+        <a href="">
+          <img src="{% static "blog/images/mountains.jpg" %}" alt="Mountain Hiking" />
+          <div class="post__content">
+            <h3>Mountain Hiking</h3>
+            <p>
+              There's nothing like the views you get when hiking in the
+              mountains! And I wasn't even prepared for what happened whilst I
+              was enjoying the view!
+            </p>
+          </div>
+        </a>
+      </article>
+    </li>
+  </ul>
+</section>
 
-    <section id="about">
-        <h2>What I do</h2>
-        <p> I love programming and new technologies in general</p>
-        <p> My goal is to keep growing</p>
-    </section>
-{% endblock content %}
+<section id="about">
+  <h2>What I Do</h2>
+  <p>
+    I love programming, I love to help others and I enjoy exploring new
+    technologies in general!
+  </p>
+  <p>
+    My goal is to keep on growing as a developer
+  </p>
+</section>
+{% endblock %}
